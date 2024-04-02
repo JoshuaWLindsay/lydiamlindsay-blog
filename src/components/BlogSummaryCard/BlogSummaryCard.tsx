@@ -4,7 +4,14 @@ import { format } from "date-fns";
 import Card from "@/components/Card";
 import styles from "./BlogSummaryCard.module.css";
 
-function BlogSummaryCard({ slug, title, abstract, publishedOn }) {
+interface BlogSummaryCardProps {
+  slug: string;
+  title: string;
+  abstract: string;
+  publishedOn: string;
+}
+
+function BlogSummaryCard({ slug, title, abstract, publishedOn }: BlogSummaryCardProps) {
   const href = `/${slug}`;
   const humanizedDate = format(new Date(publishedOn), "MMMM do, yyyy");
 

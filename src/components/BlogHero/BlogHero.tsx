@@ -2,7 +2,12 @@ import * as React from "react";
 import { format } from "date-fns";
 import styles from "./BlogHero.module.css";
 
-function BlogHero({ title, publishedOn, ...delegated }) {
+interface BlogHeroProps extends React.HTMLAttributes<HTMLDivElement> {
+  title: string;
+  publishedOn: string;
+}
+
+function BlogHero({ title, publishedOn, ...delegated }: BlogHeroProps) {
   const humanizedDate = format(new Date(publishedOn), "MMMM do, yyyy");
   return (
     <header className={styles.wrapper} {...delegated}>
