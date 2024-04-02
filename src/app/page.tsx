@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./page.module.css";
 import BlogSummaryCard from "@/components/BlogSummaryCard";
 import { getBlogPostList } from "@/helpers/file-helpers";

@@ -5,7 +5,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { BLOG_TITLE } from "@/constants";
 import styles from "./postSlug.module.css";
 
-export async function generateMetadata({ params }) {
+interface Params {
+  postSlug: string;
+}
+
+export async function generateMetadata({ params }: { params: Params }) {
   const { frontmatter } = await loadBlogPost(params.postSlug);
   return {
     title: `${frontmatter.title} • ${BLOG_TITLE}`,
@@ -13,7 +17,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-async function BlogPost({ params }) {
+async function BlogPost({ params }: { params: Params }) {
   const { frontmatter, content } = await loadBlogPost(params.postSlug);
 
   return (
