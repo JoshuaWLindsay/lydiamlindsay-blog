@@ -1,1 +1,1 @@
-export const BLOG_TITLE: string = "Joshua W Lindsay's Blogfolio";
+export const BLOG_TITLE: string = "Lydia M Lindsay's Blog";
