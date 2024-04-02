@@ -9,8 +9,8 @@ export default async function Home() {
   const blogPosts = await getBlogPostList();
   return (
     <RespectMotionPreferences>
-      <div>
-        <h1>Latest Content:</h1>
+      <div className={styles.wrapper}>
+        <h1 className={styles.mainHeading}>Latest Content:</h1>
 
         {blogPosts.map(({ slug, title, abstract, publishedOn }) => (
           <BlogSummaryCard

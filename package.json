@@ -14,6 +14,7 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.4",
     "@types/mdx": "^2.0.12",
+    "clsx": "^2.1.0",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.0.24",
     "gray-matter": "^4.0.3",
