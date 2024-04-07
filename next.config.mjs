@@ -1,6 +1,6 @@
-import nextMDX from "@next/mdx";
+// import nextMDX from "@next/mdx";
 
-const withMDX = nextMDX();
+// const withMDX = nextMDX();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,4 +9,5 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 };
 
-export default withMDX(nextConfig);
+// export default withMDX(nextConfig);
+export default nextConfig;
