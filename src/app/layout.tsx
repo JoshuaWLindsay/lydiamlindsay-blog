@@ -4,6 +4,7 @@ import "./styles.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BLOG_TITLE } from "@/constants";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
