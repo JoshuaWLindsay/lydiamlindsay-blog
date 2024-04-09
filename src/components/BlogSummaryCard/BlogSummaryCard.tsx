@@ -12,12 +12,12 @@ interface BlogSummaryCardProps {
 }
 
 function BlogSummaryCard({ slug, title, abstract, publishedOn }: BlogSummaryCardProps) {
-  const href = `/${slug}`;
+  const href = `/posts/${slug}`;
   const humanizedDate = format(new Date(publishedOn), "MMMM do, yyyy");
 
   return (
     <Card className={styles.wrapper}>
-      <Link prefetch={true} href={href} className={styles.title}>
+      <Link href={href} className={styles.title}>
         {title}
       </Link>
       <time dateTime={publishedOn}>{humanizedDate}</time>
