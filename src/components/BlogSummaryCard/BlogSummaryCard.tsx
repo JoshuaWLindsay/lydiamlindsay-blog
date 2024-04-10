@@ -12,7 +12,7 @@ interface BlogSummaryCardProps {
 }
 
 function BlogSummaryCard({ slug, title, abstract, publishedOn }: BlogSummaryCardProps) {
-  const href = `/posts/${slug}`;
+  const href = `/${slug}`;
   const humanizedDate = format(new Date(publishedOn), "MMMM do, yyyy");
 
   return (
