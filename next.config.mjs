@@ -7,4 +7,9 @@ const withMDX = nextMDX({
 /** @type {import('next').NextConfig} */
 export default withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  experimental: {
+    outputFileTracingIncludes: {
+      "/*": ["./content/**/*"],
+    },
+  },
 });
